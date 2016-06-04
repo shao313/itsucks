@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
-
+# Faker
+gem 'faker', group: [:test, :development]
 # Gemfile
 gem "starter_generators", :git => "http://github.com/raghubetina/starter_generators.git"
 # Devise
