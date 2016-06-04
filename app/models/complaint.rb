@@ -6,6 +6,7 @@ has_many :photos, :class_name => "Photo", :foreign_key => "complaint_id"
 has_many :sucks, :class_name => "Suck", :foreign_key => "complaint_id"
 validates :company_id, :presence => true
 validates :user_id, :presence => true
-validates :caption, :presence => true, :uniqueness => {:scope => :company_id, :user_id}
+validates :caption, :presence => true, :uniqueness => {:scope => :company_id}, :uniqueness => {:scope => :user_id}
+validates :body, :presence => true
 validates :body, :presence => true
 end
