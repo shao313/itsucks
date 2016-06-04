@@ -1,0 +1,30 @@
+<div class="page-header">
+  <h1>
+    Sucks
+    <a href="/sucks/new" class="btn btn-lg btn-success">New Suck</a>
+  </h1>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <table class="table table-striped table-hover">
+      <tr>
+        <th>User</th>
+        <th>Complaint</th>
+        <th>Actions</th>
+      </tr>
+
+      <% @sucks.each do |suck| %>
+      <tr>
+        <td><%= suck.user_id %></td>
+        <td><%= suck.complaint_id %></td>
+        <td>
+          <a href="/sucks/<%= suck.id %>" class="btn btn-primary">Show</a>
+          <a href="/sucks/<%= suck.id %>/edit" class="btn btn-warning">Edit</a>
+          <a href="/delete_suck/<%= suck.id %>" class="btn btn-danger" rel="nofollow">Delete</a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

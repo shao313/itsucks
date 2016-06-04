@@ -1,0 +1,34 @@
+<div class="page-header">
+  <h3>Complaint #<%= @complaint.id %></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <dl class="dl-horizontal">
+      <dt>Company</dt>
+      <dd><%= @complaint.company_id %></dd>
+
+      <dt>User</dt>
+      <dd><%= @complaint.user_id %></dd>
+
+      <dt>Body</dt>
+      <dd><%= @complaint.body %></dd>
+
+      <dt>Caption</dt>
+      <dd><%= @complaint.caption %></dd>
+
+    </dl>
+
+    <div class="btn-group btn-group-justified">
+      <a href="/complaints" class="btn btn-primary">
+        Back
+      </a>
+      <a href="/complaints/<%= @complaint.id %>/edit" class="btn btn-warning">
+        Edit
+      </a>
+      <a href="/delete_complaint/<%= @complaint.id %>" class="btn btn-danger" rel="nofollow">
+        Delete
+      </a>
+    </div>
+  </div>
+</div>
